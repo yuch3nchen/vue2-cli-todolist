@@ -1,7 +1,7 @@
 <template>
   <div>
-    <ul>
-      <li v-for="(item, index) in todoEntries" :key="index">
+    <ul class="list-unstyled mb-0">
+      <li class="mb-3" v-for="(item, index) in todoEntries" :key="index">
         <ToDoItem
           :todo-item="item"
           @delete="deleteItem(index)"

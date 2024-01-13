@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="container mx-auto">
-    <h1>Todolist</h1>
+  <div id="app" class="container mx-auto shadow py-3">
+    <h1 class="display-4 mb-3 fw-bold">Todolist</h1>
     <AddtoDo @add-todo="addToDoItem" />
     <Todos
       :todo-entries="todoEntries"
@@ -70,34 +70,8 @@ export default {
 </script>
 
 <style>
-ul {
-  padding: 0;
-  list-style: none;
-}
-li {
-  margin-bottom: 1rem;
-}
-.container {
-  max-width: 360px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.mx-auto {
-  margin: auto;
-}
-.d-flex {
-  display: flex;
-}
-.flex-wrap {
-  flex-wrap: wrap;
-}
-.me-3 {
-  margin-right: 1rem;
-}
-.space-between {
-  justify-content: space-between;
-}
-.ms-auto {
-  margin-left: auto;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap");
+#app {
+  font-family: "Noto Sans TC", sans-serif;
 }
 </style>
