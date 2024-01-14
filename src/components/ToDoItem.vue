@@ -1,9 +1,9 @@
 <template>
   <div
-    class="d-flex flex-column flex-sm-row flex-wrap gap-2 justify-content-sm-between border border-2 rounded px-3 py-2"
+    class="d-flex flex-column flex-xl-row flex-wrap gap-2 justify-content-sm-between align-items-xl-center border border-2 rounded px-3 py-2"
   >
     <p
-      class="mb-0 fs-4"
+      class="mb-0 fs-5"
       :class="[
         getLevelClass(todoItem.level),
         { completed: todoItem.completed },
@@ -11,14 +11,18 @@
     >
       {{ todoItem.title }}
     </p>
-    <div class="btn-group align-self-end">
-      <button
-        class="ms-auto btn btn-sm btn-outline-secondary"
-        @click="toggleStatus"
-      >
-        {{ todoItem.completed ? "標示未完成" : "標示已完成" }}
-      </button>
-      <button class="btn btn-sm btn-danger" @click="deleteTodo">刪除</button>
+    <div
+      class="align-self-end d-flex align-items-center justify-content-end gap-2 flex-wrap"
+    >
+      <span class="text-body-tertiary fw-light time-stamp">{{
+        todoItem.timeStamp
+      }}</span>
+      <div class="btn-group">
+        <button class="btn btn-sm btn-outline-secondary" @click="toggleStatus">
+          {{ todoItem.completed ? "標示未完成" : "標示已完成" }}
+        </button>
+        <button class="btn btn-sm btn-danger" @click="deleteTodo">刪除</button>
+      </div>
     </div>
   </div>
 </template>
@@ -53,6 +57,9 @@ export default {
 </script>
 
 <style>
+.time-stamp {
+  font-size: 0.8rem;
+}
 .important {
   color: #ee964b;
 }

@@ -22,23 +22,7 @@ export default {
   },
   data() {
     return {
-      todoEntries: [
-        {
-          title: "打電腦",
-          level: "normal",
-          completed: false,
-        },
-        {
-          title: "吃飯",
-          level: "important",
-          completed: false,
-        },
-        {
-          title: "睡覺",
-          level: "urgent",
-          completed: false,
-        },
-      ],
+      todoEntries: [],
     };
   },
   methods: {

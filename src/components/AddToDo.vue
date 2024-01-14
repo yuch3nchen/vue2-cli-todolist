@@ -30,10 +30,12 @@ export default {
   methods: {
     addTodo() {
       if (this.title === "") return alert("請輸入事項！");
+      const timeData = new Date().toLocaleString();
       const newTodoObj = {
         title: this.title,
         level: this.todoLevel,
         completed: false,
+        timeStamp: timeData,
       };
       this.$emit("add-todo", newTodoObj);
       this.title = "";
