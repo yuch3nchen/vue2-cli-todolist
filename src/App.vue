@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container mx-auto shadow py-3">
+  <div id="app" class="container shadow p-3 rounded">
     <h1 class="display-4 mb-3 fw-bold">Todolist</h1>
     <AddtoDo @add-todo="addToDoItem" />
     <Todos

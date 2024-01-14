@@ -8,12 +8,16 @@
           @toggle="toggleStatus(index)"
         />
       </li>
+      <li v-if="todoEntries.length == 0">
+        <h2 class="text-secondary fs-4 text-center">尚無任何事項</h2>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 import ToDoItem from "./ToDoItem.vue";
+
 export default {
   name: "ToDos",
   components: { ToDoItem },

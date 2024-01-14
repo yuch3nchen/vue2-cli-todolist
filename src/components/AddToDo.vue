@@ -1,17 +1,19 @@
 <template>
-  <div class="row g-3 mb-5">
-    <div class="col-6">
+  <div class="row flex-column flex-md-row justify-content-between g-3 mb-5">
+    <div class="col-auto col-md-8 col-lg-6">
       <input type="text" class="form-control" v-model="title" name="title" />
     </div>
-    <div class="col-auto">
+    <div class="col-auto col-md-4 col-lg-3">
       <select class="form-select" v-model="todoLevel">
         <option value="normal">一般</option>
         <option value="important">重要</option>
         <option value="urgent">緊急</option>
       </select>
     </div>
-    <div class="col-auto">
-      <button class="btn btn-success px-3" @click="addTodo">增加</button>
+    <div class="col-auto col-lg-3">
+      <button class="btn btn-success px-3 d-block w-100" @click="addTodo">
+        增加
+      </button>
     </div>
   </div>
 </template>

@@ -1,9 +1,9 @@
 <template>
   <div
-    class="d-flex flex-column flex-sm-row flex-wrap gap-2 justify-content-center justify-content-sm-between align-items-center border border-2 rounded px-3 py-2"
+    class="d-flex flex-column flex-sm-row flex-wrap gap-2 justify-content-sm-between border border-2 rounded px-3 py-2"
   >
     <p
-      class="mb-0 fs-4 fw-light"
+      class="mb-0 fs-4"
       :class="[
         getLevelClass(todoItem.level),
         { completed: todoItem.completed },
@@ -11,7 +11,7 @@
     >
       {{ todoItem.title }}
     </p>
-    <div class="btn-group">
+    <div class="btn-group align-self-end">
       <button
         class="ms-auto btn btn-sm btn-outline-secondary"
         @click="toggleStatus"
