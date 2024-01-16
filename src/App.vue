@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container shadow p-3 rounded">
+  <div id="app" class="shadow p-3 rounded">
     <h1 class="display-4 mb-3 fw-bold">Todolist</h1>
     <AddtoDo @add-todo="addToDoItem" />
     <Todos
@@ -22,20 +22,31 @@ export default {
   },
   data() {
     return {
-      todoEntries: [],
+      todoEntries: [
+        //   title: '',
+        //   level: '',
+        //   completed: false,
+        //   timeStamp: '',
+      ],
     };
   },
   methods: {
     addToDoItem(newItem) {
       this.todoEntries.push(newItem);
-      console.log(this.todoEntries);
+      //console.log(this.todoEntries);
     },
     deleteToDoItem(index) {
       this.todoEntries.splice(index, 1);
     },
     toggleStatusItem(index) {
+      const updatedTime = new Date().toLocaleString();
+      this.todoEntries[index].timeStamp = updatedTime;
       this.todoEntries[index].completed = !this.todoEntries[index].completed;
-      console.log(this.todoEntries);
+      //console.log(this.todoEntries);
+    },
+    loadFromLocalStorage() {
+      const storedData = localStorage.getItem("todoEntries");
+      if (storedData) this.todoEntries = JSON.parse(storedData);
     },
   },
   watch: {
@@ -43,12 +54,12 @@ export default {
       handler(newItem) {
         localStorage.setItem("todoEntries", JSON.stringify(newItem));
       },
+      // 深度監聽，內部值變化就會被調用
       deep: true,
     },
   },
   created() {
-    const storedData = localStorage.getItem("todoEntries");
-    if (storedData) this.todoEntries = JSON.parse(storedData);
+    this.loadFromLocalStorage();
   },
 };
 </script>

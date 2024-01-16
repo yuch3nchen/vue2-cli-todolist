@@ -1,7 +1,12 @@
 <template>
   <div class="row flex-column flex-md-row justify-content-between g-3 mb-5">
     <div class="col-auto col-md-8 col-lg-6">
-      <input type="text" class="form-control" v-model="title" name="title" />
+      <input
+        type="text"
+        class="form-control"
+        v-model.trim="title"
+        name="title"
+      />
     </div>
     <div class="col-auto col-md-4 col-lg-3">
       <select class="form-select" v-model="todoLevel">
