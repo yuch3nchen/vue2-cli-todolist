@@ -23,10 +23,11 @@ export default {
   data() {
     return {
       todoEntries: [
+        //   {
         //   title: '',
         //   level: '',
         //   completed: false,
-        //   timeStamp: '',
+        //   timeStamp: ''},
       ],
     };
   },
@@ -38,10 +39,11 @@ export default {
     deleteToDoItem(index) {
       this.todoEntries.splice(index, 1);
     },
-    toggleStatusItem(index) {
+    toggleStatusItem(todo) {
+      // console.log(todo);
       const updatedTime = new Date().toLocaleString();
-      this.todoEntries[index].timeStamp = updatedTime;
-      this.todoEntries[index].completed = !this.todoEntries[index].completed;
+      this.todoEntries[todo].timeStamp = updatedTime;
+      this.todoEntries[todo].completed = !this.todoEntries[todo].completed;
       //console.log(this.todoEntries);
     },
     loadFromLocalStorage() {

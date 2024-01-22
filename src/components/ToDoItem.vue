@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     deleteTodo() {
-      this.$emit("delete", this.todoItem);
+      this.$emit("delete");
     },
     getLevelClass(level) {
       if (level === "important") {
@@ -46,7 +46,7 @@ export default {
       }
     },
     toggleStatus() {
-      this.$emit("toggle", this.todoItem);
+      this.$emit("toggle");
     },
   },
 };
