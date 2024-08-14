@@ -15,7 +15,7 @@ A simple web-based TodoList application built with Vue.js, featuring task priori
 ## Preview
 
 - Desktop
-  <img src="screenshots/screenshot-desktop.png" width="400" />
+  <img src="screenshots/screenshot-desktop.png" width="600" />
 
 - Mobile
   <img src="screenshots/screenshot-mobile.png" width="300" />
