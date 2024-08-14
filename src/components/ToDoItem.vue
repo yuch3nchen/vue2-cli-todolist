@@ -30,7 +30,7 @@
 <script>
 export default {
   name: "TodoItem",
-  // props 是单向数据流，只能由父组件传递给子组件，子组件不能直接修改 prop 的值。
+  // props 父组件傳给子组件，子组件不能直接修改 prop 的值。
   props: {
     todoItem: Object,
   },
