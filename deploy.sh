@@ -27,3 +27,5 @@ git push -f https://github.com/yuch3nchen/vue2-cli-todolist.git main:gh-pages
 # git push -f https://github.com/yuch3nchen/vue2-cli-todolist.git master:gh-pages
 
 cd -
+
+# 此指令取自於 https://israynotarray.com/vue/20200214/1055437216/ ，感謝 Ray 的分享！
