@@ -14,11 +14,15 @@ A simple web-based TodoList application built with Vue.js, featuring task priori
 
 ## Preview
 
-- Desktop
-  <img src="screenshots/screenshot-desktop.png" width="600" />
+Here's a sneak peek of our Personal Finance Tracker in action:
 
-- Mobile
-  <img src="screenshots/screenshot-mobile.png" width="300" />
+### Desktop View
+
+<img src="screenshots/screenshot-desktop.png" width="600" />
+
+### Mobile View
+
+<img src="screenshots/screenshot-mobile.png" width="300" />
 
 ## Live Demo
 
@@ -27,6 +31,8 @@ A simple web-based TodoList application built with Vue.js, featuring task priori
 ## Technology Stack
 
 - Vue.js 2
+- Vue Options API
+- Vue CLI
 - BootStrap 5
 - SCSS
 
