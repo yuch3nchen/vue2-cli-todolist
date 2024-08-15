@@ -30,10 +30,10 @@ Here's a sneak peek of our Personal Finance Tracker in action:
 
 ## Technology Stack
 
-- Vue.js
+- Vue.js 2.6.14
 - Vue Options API
-- Vue CLI
-- BootStrap 5
+- Vue CLI 5.0.0
+- BootStrap 5.3.2
 - SCSS
 
 ## Getting Started
