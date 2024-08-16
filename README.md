@@ -1,5 +1,8 @@
 # Vue Todolist
 
+![image](https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![image](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 A simple web-based TodoList application built with Vue.js, featuring task prioritization, automatic timestamps, and efficient task management.
 
 ## Features
